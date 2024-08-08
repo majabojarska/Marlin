@@ -794,10 +794,10 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER -44   // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER -10   // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.3 // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -2.3 // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
-#define MIN_PROBE_EDGE 10
+#define MIN_PROBE_EDGE (5 + ABS(Y_PROBE_OFFSET_FROM_EXTRUDER))
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -830,7 +830,7 @@
 #define Z_CLEARANCE_DEPLOY_PROBE 8   // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES 3 // Z Clearance between probe points
 #define Z_CLEARANCE_MULTI_PROBE 3    // Z Clearance between multiple probes
-// #define Z_AFTER_PROBING           5 // Z position after probing is done
+#define Z_AFTER_PROBING           10 // Z position after probing is done
 
 #define Z_PROBE_LOW_POINT -2 // Farthest distance below the trigger-point to go before stopping
 
