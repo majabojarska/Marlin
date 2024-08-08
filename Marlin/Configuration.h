@@ -904,7 +904,6 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS 230
-// #define Z_MAX_POS 250 // Original
 #define Z_MAX_POS 230 // To avoid hitting custom knob, unrelated to Y_MAX_POS
 
 /**
